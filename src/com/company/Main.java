@@ -1,3 +1,14 @@
+/*
+Zulker Nayeen
+FH -11
+
+This is main class , which will use user choice, then create a single window manager
+use of singeleton design pattern , window manager will handle the rest
+
+
+ */
+
+
 package com.company;
 
 import java.util.Scanner;
@@ -34,11 +45,11 @@ public class Main {
         int choice = 3;
         config = new Config_manager("text"); // config file loads text
         String path ="E://intellij project//sdpAss3//src//com//company//config.txt";
-        config.read(path);
-             Window_manager wm = new Window_manager(choice);
-             wm.initializeFram();
-             wm.loadUI(config);
-             wm.startUI();
+        config.read(path); // read the file , create necessary file read objects
+             Window_manager wm = new Window_manager(choice); // create window manager
+             wm.initializeFram(); // initialize the frame ( java swing frame )
+             wm.loadUI(config); // load from file, the objects , create objects
+             wm.startUI(); // show the objects added from the file
 
 
     }

@@ -1,23 +1,23 @@
 package com.company;
 
-public class Default_Design_Style {
+public class Default_Design_Style extends Abstract_UI_Factory{
 
-    public UI_Component[] ui_components = new UI_Component[10];
-    public int componentIndex=0;
+    // create the component of file
     public void createComponent(Component component)
     {
         if(component.getType().equals("Button"))
         {
-            ui_components[componentIndex] = new Simplistic_Button(component);
+            super.ui_components[super.componentIndex] = new Simplistic_Button(component);
+            System.out.println("button created ");
         }
         else if (component.getType().equals("TextArea"))
         {
-            ui_components[componentIndex] = new Simplistic_TextArea(component);
+            super.ui_components[super.componentIndex] = new Simplistic_TextArea(component);
         }
         else if (component.getType().equals("TextField"))
         {
-            ui_components[componentIndex] = new Simplistic_TextField(component);
+            super.ui_components[super.componentIndex] = new Simplistic_TextField(component);
         }
-        componentIndex+=1;
+        super.componentIndex+=1;
     }
 }
