@@ -36,7 +36,9 @@ public class Main {
         String path ="E://intellij project//sdpAss3//src//com//company//config.txt";
         config.read(path);
              Window_manager wm = new Window_manager(choice);
+             wm.initializeFram();
              wm.loadUI(config);
+             wm.startUI();
 
 
     }

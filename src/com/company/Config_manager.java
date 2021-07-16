@@ -56,11 +56,13 @@ public class Config_manager {
             }
             else if(item[0].equals("X"))
             {
-                component.setX(item[1]);
+                int x = Integer.parseInt(item[1]);
+                component.setX(x);
             }
             else if(item[0].equals("Y"))
             {
-                component.setY(item[1]);
+                int y = Integer.parseInt(item[1]);
+                component.setY(y);
             }
 
         }
