@@ -20,4 +20,9 @@ public class Default_Design_Style extends Abstract_UI_Factory{
         }
         super.componentIndex+=1;
     }
+
+    @Override
+    public void changeAttribute() {
+        System.out.println("you cannot change anything here");
+    }
 }

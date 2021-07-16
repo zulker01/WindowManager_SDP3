@@ -19,7 +19,7 @@ public class Main {
 	// write your code here
         Scanner scanner = new Scanner(System.in);
         Config_manager config;
-
+        int choice;
 
         System.out.println("**** Welcome ******");
         System.out.println("take input from : \n1.text file\n2.xml file");
@@ -36,13 +36,13 @@ public class Main {
             config = new Config_manager("xml"); // config file loads xml
             config.read(path);
         }
-
+        */
         System.out.println("Select Design Style : \n1.Simplistic Design\n2.High detailed Design\n3.Default");
+        choice = scanner.nextInt();
 
         // take input for text or xml
-         choice = scanner.nextInt();
-*/
-        int choice = 3;
+
+
         config = new Config_manager("text"); // config file loads text
         String path ="E://intellij project//sdpAss3//src//com//company//config.txt";
         config.read(path); // read the file , create necessary file read objects

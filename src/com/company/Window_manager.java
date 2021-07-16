@@ -82,6 +82,7 @@ public class Window_manager {
             componentIndex+=1; // go to next index
         }
         config.closeFile(); // after reading ,close the file
+        designStyle.changeAttribute();
 
     }
 
@@ -94,7 +95,9 @@ public class Window_manager {
 
         panel.setLayout(null); // absolute layout
 
+
     }
+
 
     // this will show the final UI
     public void startUI()

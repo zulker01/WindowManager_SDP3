@@ -11,6 +11,7 @@ public class Simplistic_Button extends UI_Component {
         super.X = x;
         super.Y = y;
         super.text = component.getText();
+        super.type = component.getType();
 
     }
     public void addToUI()

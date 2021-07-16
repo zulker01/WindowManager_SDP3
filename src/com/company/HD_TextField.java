@@ -1,10 +1,11 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class Simplistic_TextField extends UI_Component {
+public class HD_TextField extends UI_Component {
     JTextField field = new JTextField();
-    public Simplistic_TextField(Component component)
+    public HD_TextField(Component component)
     {
         int x  = component.getX();
         int y = component.getY();
@@ -16,6 +17,8 @@ public class Simplistic_TextField extends UI_Component {
     }
     public void addToUI()
     {
+        field.setBorder(BorderFactory.createLineBorder(Color.blue,5,true));
+        field.setBackground(Color.yellow);
         field.setBounds(super.X,super.Y,100,50);
         field.setText(super.text);
         Window_manager.panel.add(field);
