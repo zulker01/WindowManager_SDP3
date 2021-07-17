@@ -32,11 +32,22 @@ public class Simplistic_Design_Style extends Abstract_UI_Factory{
             if(choice==1) {
                 System.out.println("Which element want to change ?\nEnter Element no : ");
                 changeIndex = scanner1.nextInt();
-                scanner1.nextLine();
-                System.out.println("change " + ui_components[changeIndex].type + " " + changeIndex + " text");
+                //scanner1.nextLine();
+                System.out.println("change " + ui_components[changeIndex].type + " " + changeIndex + " Color :\nEnter RGB value : ");
+                System.out.print("red : ");
+                int r = scanner1.nextInt();
+                System.out.print("Green : ");
+                int g = scanner1.nextInt();
+                System.out.print("Blue : ");
+                int b = scanner1.nextInt();
+
+                /*
                 String newText = scanner1.nextLine();
                 ui_components[changeIndex].text = newText;
                 System.out.println( ui_components[changeIndex].text);
+
+                 */
+                ui_components[changeIndex].changeColor(r,g,b);
             }
             else
             {

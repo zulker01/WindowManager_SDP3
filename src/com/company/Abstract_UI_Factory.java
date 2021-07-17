@@ -7,5 +7,7 @@ public abstract class Abstract_UI_Factory {
     public abstract void createComponent(Component component);
     public abstract  void changeAttribute();
 
+
+
     }
 

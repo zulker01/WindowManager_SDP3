@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Simplistic_Button extends UI_Component {
     JButton b = new JButton();
@@ -12,13 +13,20 @@ public class Simplistic_Button extends UI_Component {
         super.Y = y;
         super.text = component.getText();
         super.type = component.getType();
+        super.bgColor = new Color(51,255,255);
+
 
     }
     public void addToUI()
     {
+        b.setBackground(super.bgColor);
         b.setBounds(super.X,super.Y,100,50);
         b.setText(super.text);
         Window_manager.panel.add(b);
+    }
+    public void changeColor(int r, int g, int b)
+    {
+        super.bgColor = new Color(r,g,b);
     }
 
 }
