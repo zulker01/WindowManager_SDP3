@@ -46,7 +46,9 @@ public class Main {
         config = new Config_manager("text"); // config file loads text
         String path ="E://intellij project//sdpAss3//src//com//company//config.txt";
         config.read(path); // read the file , create necessary file read objects
-             Window_manager wm = new Window_manager(choice); // create window manager
+            // Window_manager wm = new Window_manager(choice); // create window manager
+            Window_manager wm = Window_manager.getInstance();
+            wm.initializeDesignStyle(choice);
              wm.initializeFram(); // initialize the frame ( java swing frame )
              wm.loadUI(config); // load from file, the objects , create objects
              wm.startUI(); // show the objects added from the file

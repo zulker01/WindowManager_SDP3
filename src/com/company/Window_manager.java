@@ -39,11 +39,23 @@ public class Window_manager {
     private Integer componentIndex=0;
     private Abstract_UI_Factory designStyle;
 
+    private static Window_manager wm = new Window_manager();
+
+    public static Window_manager getInstance()
+    {
+        return wm;
+    }
+    public void initializeDesignStyle(Integer choice)
+    {
+        designStyle  = Factory_producer.getFactory(choice);
+    }
+
+    /*
     // this class will initialize WM with appropriate choice
     public Window_manager(Integer choice)
     {
         // get the design style from appropriate class
-        designStyle  = Factory_producer.getFactory(choice);
+
         /*
         if(choice==1)
         {
@@ -61,9 +73,10 @@ public class Window_manager {
             df = new Default_Design_Style();
             defaultbool=true;
         }
-        */
+
 
     }
+    */
 
     // this class will read the file one by one,
     // create & add every object in the desing style
