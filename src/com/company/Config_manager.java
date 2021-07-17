@@ -6,10 +6,10 @@ import  java.util.*;
 
 public class Config_manager {
 
-    private File myObj;
-    private Scanner myReader;
-    private boolean xml;
-    private  boolean text;
+    protected File myObj;
+    protected Scanner myReader;
+    protected boolean xml;
+    protected   boolean text;
     public Config_manager(String type)
     {
         if(type.equals("text"))

@@ -23,29 +23,27 @@ public class Main {
 
         System.out.println("**** Welcome ******");
         System.out.println("take input from : \n1.text file\n2.xml file");
-        /*
+
         // take input for text or xml
-        int choice = scanner.nextInt();
-        String path ="E://intellij project//sdpAss3//src//com//company//config.txt";
+        choice = scanner.nextInt();
+        String pathTxt ="E://intellij project//sdpAss3//src//com//company//config.txt";
+        String pathXML ="E://intellij project//sdpAss3//src//com//company//config2.xml";
         if(choice==1) {
 
             config = new Config_manager("text"); // config file loads text
-            config.read(path);
+            config.read(pathTxt);
         }
         else {
-            config = new Config_manager("xml"); // config file loads xml
-            config.read(path);
+            config = new XML_Adapter("xml"); // config file loads xml
+            config.read(pathXML);
         }
-        */
+
         System.out.println("Select Design Style : \n1.Simplistic Design\n2.High detailed Design\n3.Default");
         choice = scanner.nextInt();
 
         // take input for text or xml
 
 
-        config = new Config_manager("text"); // config file loads text
-        String path ="E://intellij project//sdpAss3//src//com//company//config.txt";
-        config.read(path); // read the file , create necessary file read objects
             // Window_manager wm = new Window_manager(choice); // create window manager
             Window_manager wm = Window_manager.getInstance();
             wm.initializeDesignStyle(choice);

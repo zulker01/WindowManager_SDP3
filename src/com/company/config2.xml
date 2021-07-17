@@ -1,0 +1,29 @@
+<?xml version="1.0"?>  
+ <class>  
+        <Component>
+            <Type>Button</Type>
+            <Text>click me</Text>
+            <X>100</X>
+            <Y>200</Y>
+
+        </Component>
+
+    <Component>
+        <Type>TextField</Type>
+        <Text>yes textfield</Text>
+        <X>100</X>
+        <Y>70</Y>
+
+    </Component>
+
+    <Component>
+        <Type>TextArea</Type>
+        <Text>yes textarea</Text>
+        <X>100</X>
+        <Y>270</Y>
+
+    </Component>
+      
+
+      
+    </class>  
