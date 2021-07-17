@@ -17,66 +17,36 @@ import javax.swing.*;
 
 public class Window_manager {
 
-    public  static JFrame frame = new JFrame("JFrame demo");  // creating the frame
+    public  static JFrame frame = new JFrame("Zulker Nayeen - 11");  // creating the frame
     public static JPanel panel =  new JPanel(); // creating panel
     // creating the frame obj
 
-
-
-
-
-
-    /*
-    private Simplistic_Design_Style sim ;
-    private boolean simbool;
-    private boolean hdbool;
-    private boolean defaultbool;
-    private High_Detailed_Design_Style hd;
-    private Default_Design_Style df;
-
-     */
+    // component array of UI elements
     private Component[] components= new Component[10];
-    private Integer componentIndex=0;
-    private Abstract_UI_Factory designStyle;
+    private Integer componentIndex=0; // index
+    private Abstract_UI_Factory designStyle; // UI design style
 
+    // static window manager class, this is example of singleton pattern,
+    // only one object will be used throughout the whole program
     private static Window_manager wm = new Window_manager();
+
+    // if any class wants to word the window manager class
 
     public static Window_manager getInstance()
     {
         return wm;
     }
+
+    // create the design style according to user choise
     public void initializeDesignStyle(Integer choice)
     {
         designStyle  = Factory_producer.getFactory(choice);
     }
 
-    /*
-    // this class will initialize WM with appropriate choice
-    public Window_manager(Integer choice)
-    {
-        // get the design style from appropriate class
-
-        /*
-        if(choice==1)
-        {
-            sim = new Simplistic_Design_Style();
-            simbool = true;
-
-        }
-        else if (choice==2)
-        {
-            hd = new High_Detailed_Design_Style();
-            hdbool = true;
-        }
-        else if(choice==3)
-        {
-            df = new Default_Design_Style();
-            defaultbool=true;
-        }
+    // private constructor, no one can use it to create any mor window manager
+    private Window_manager(){}
 
 
-    }
-    */
 
     // this class will read the file one by one,
     // create & add every object in the desing style
@@ -87,15 +57,15 @@ public class Window_manager {
         {
             components[componentIndex] = config.nextItem(); // get next component
 
-            System.out.println(components[componentIndex].getX()+" "+components[componentIndex].getY()+" "+components[componentIndex].getType()+" "+components[componentIndex].getText()+" ");
+            //System.out.println(components[componentIndex].getX()+" "+components[componentIndex].getY()+" "+components[componentIndex].getType()+" "+components[componentIndex].getText()+" ");
 
             designStyle.createComponent(components[componentIndex]); // create the component
-            System.out.println(designStyle.ui_components[componentIndex].text);
+            //System.out.println(designStyle.ui_components[componentIndex].text);
 
             componentIndex+=1; // go to next index
         }
         config.closeFile(); // after reading ,close the file
-        designStyle.changeAttribute();
+        designStyle.changeAttribute(); // change attribute from taking the user
 
     }
 

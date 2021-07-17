@@ -4,23 +4,23 @@
             <Type>Button</Type>
             <Text>click me</Text>
             <X>100</X>
-            <Y>200</Y>
+            <Y>50</Y>
 
         </Component>
 
     <Component>
         <Type>TextField</Type>
         <Text>yes textfield</Text>
-        <X>100</X>
-        <Y>70</Y>
+        <X>150</X>
+        <Y>270</Y>
 
     </Component>
 
     <Component>
         <Type>TextArea</Type>
         <Text>yes textarea</Text>
-        <X>100</X>
-        <Y>270</Y>
+        <X>70</X>
+        <Y>170</Y>
 
     </Component>
       

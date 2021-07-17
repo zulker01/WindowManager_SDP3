@@ -1,10 +1,20 @@
+/*
+Zulker Nayeen
+FH -11
+
+this is textarea created by simplistic design style
+ */
+
+
 package com.company;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Simplistic_TextArea extends UI_Component {
-    JTextArea area = new JTextArea();
+    JTextArea area = new JTextArea();  // create text area
+
+    // constructor
     public Simplistic_TextArea(Component component)
     {
         int x  = component.getX();
@@ -16,6 +26,8 @@ public class Simplistic_TextArea extends UI_Component {
         super.bgColor = new Color(51,255,255);
 
     }
+
+    // add to java swing panel
     public void addToUI()
     {
         area.setBackground(super.bgColor);
@@ -24,6 +36,7 @@ public class Simplistic_TextArea extends UI_Component {
         Window_manager.panel.add(area);
     }
 
+    // change color
     public void changeColor(int r, int g, int b)
     {
         super.bgColor = new Color(r,g,b);
